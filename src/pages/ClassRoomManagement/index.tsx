@@ -1,8 +1,9 @@
 import { Button, Input, Select, Table, Space, Modal, message } from 'antd';
-import { SearchOutlined, PlusOutlined } from '@ant-design/icons';
+import { SearchOutlined, PlusOutlined, EyeOutlined } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 import { useModel } from 'umi';
 import ClassroomForm from '@/components/ClassRoomManagement/form';
+import ClassroomDetail from '@/components/ClassRoomManagement/detail';
 import type { ColumnsType, TableProps } from 'antd/es/table';
 
 const { Option } = Select;
@@ -21,6 +22,10 @@ deleteClassroom
 const [visible, setVisible] = useState<boolean>(false);
 const [isEdit, setIsEdit] = useState<boolean>(false);
 const [currentClassroom, setCurrentClassroom] = useState<Classroom.Record | undefined>();
+
+// Detail view state
+const [detailVisible, setDetailVisible] = useState<boolean>(false);
+const [detailClassroom, setDetailClassroom] = useState<Classroom.Record | undefined>();
 
 // Search and filter states
 const [searchText, setSearchText] = useState<string>('');
@@ -45,6 +50,12 @@ if (isEdit && originalRoomCode) {
     setVisible(false);
     }
 }
+};
+
+// Handle opening detail view
+const handleViewDetails = (record: Classroom.Record) => {
+    setDetailClassroom(record);
+    setDetailVisible(true);
 };
 
 // Handle delete with confirmation
@@ -116,6 +127,12 @@ return matchesSearch && matchesRoomType && matchesStaff;
         key: 'action',
         render: (_, record) => (
         <Space size="middle">
+            <Button 
+                icon={<EyeOutlined />}
+                onClick={() => handleViewDetails(record)}
+            >
+                View
+            </Button>
             <Button 
             onClick={() => {
                 setCurrentClassroom(record);
@@ -192,7 +209,7 @@ return matchesSearch && matchesRoomType && matchesStaff;
         <Table 
             columns={columns} 
             dataSource={filteredData} 
-            rowKey="id" // Changed from roomCode to id
+            rowKey="id"
             pagination={{ pageSize: 10 }}
         />
         
@@ -205,6 +222,13 @@ return matchesSearch && matchesRoomType && matchesStaff;
             classrooms={classrooms}
             staffList={staffList}
             onSubmit={handleFormSubmit}
+        />
+
+        {/* Classroom Detail Modal */}
+        <ClassroomDetail
+            visible={detailVisible}
+            classroom={detailClassroom}
+            onClose={() => setDetailVisible(false)}
         />
         </div>
     );

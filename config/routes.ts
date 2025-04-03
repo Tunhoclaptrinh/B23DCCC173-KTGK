@@ -69,9 +69,6 @@ export default [
 		icon: 'QuestionCircleOutlined',
 	},
 
-
-
-
 	// {
 	// 	path: '/service-management/appointment-management',
 	// 	name: 'Appointment',
@@ -79,92 +76,110 @@ export default [
 	// 	icon: 'QuestionCircleOutlined',
 	// },
 	{
-		path: "/service-management",
-		name: "ServiceManagement",
+		path: '/service-management',
+		name: 'ServiceManagement',
 		// component: "./ServiceManagement/ServiceManagement",
-		icon: "QuestionCircleOutlined",
-		"routes": [
+		icon: 'QuestionCircleOutlined',
+		routes: [
 			{
-				"path": "/service-management/dash-board",
-				"name": "Dash Board",
-				component: "./ServiceManagement/DashBoard",
+				path: '/service-management/dash-board',
+				name: 'Dash Board',
+				component: './ServiceManagement/DashBoard',
 			},
 			{
-				"path": "/service-management/customer-management",
-				"name": "Customer",
+				path: '/service-management/customer-management',
+				name: 'Customer',
 				component: './ServiceManagement/ServiceManagementComponent/CustomerManagement',
-
 			},
 			{
-				"path": "/service-management/service-management",
-				"name": "Service",
+				path: '/service-management/service-management',
+				name: 'Service',
 				component: './ServiceManagement/ServiceManagementComponent/ServiceManagement',
 			},
 			{
-				"path": "/service-management/employee-management",
-				"name": "Employee",
+				path: '/service-management/employee-management',
+				name: 'Employee',
 				component: './ServiceManagement/ServiceManagementComponent/EmployeeManagement',
-
 			},
 			{
-				"path": "/service-management/appointment-management",
-				"name": "Appointment",
+				path: '/service-management/appointment-management',
+				name: 'Appointment',
 				// component: '@/components/ServiceManagementComponent/AppointmentScheduler',
 				component: './ServiceManagement/ServiceManagementComponent/AppointmentManagement',
 			},
 			{
-				"path": "/service-management/review-responses",
-				"name": "Review Responses",
+				path: '/service-management/review-responses',
+				name: 'Review Responses',
 				component: './ServiceManagement/ServiceManagementComponent/ReviewManagement',
 			},
-		]
+		],
 	},
 
 	{
-		path: "/diploma-management",
-		name: "DipomaManagement",
+		path: '/diploma-management',
+		name: 'DipomaManagement',
 		// component: "./DiplomaManagement/App",
-		icon: "QuestionCircleOutlined",
-		"routes": [
+		icon: 'QuestionCircleOutlined',
+		routes: [
 			{
-				"path": "/diploma-management/diplomabook-management/",
-				"name": "Diploma Book",
-				component: "./DiplomaManagement/DiplomaBook",
-				
+				path: '/diploma-management/diplomabook-management/',
+				name: 'Diploma Book',
+				component: './DiplomaManagement/DiplomaBook',
 			},
 			{
-				"path": "/diploma-management/diploma-graduation-decision",
-				"name": "Graduation Decision",
-				component: "./DiplomaManagement/GraduationDecisionManagement",
-				
+				path: '/diploma-management/diploma-graduation-decision',
+				name: 'Graduation Decision',
+				component: './DiplomaManagement/GraduationDecisionManagement',
 			},
 			{
-				"path": "/diploma-management/diploma-information",
-				"name": "Diploma Information",
-				component: "./DiplomaManagement/DiplomaInformationManagement",
+				path: '/diploma-management/diploma-information',
+				name: 'Diploma Information',
+				component: './DiplomaManagement/DiplomaInformationManagement',
 			},
-			
+
 			{
-				"path": "/diploma-management/diploma-information-management",
-				"name": "Field Template",
-				component: "./DiplomaManagement/DiplomaFieldTemplateManagement",
+				path: '/diploma-management/diploma-information-management',
+				name: 'Field Template',
+				component: './DiplomaManagement/DiplomaFieldTemplateManagement',
 			},
 			{
-				"path": "/diploma-management/diploma-lookup",
-				"name": "Diploma Lookup",
-				component: "./DiplomaManagement/DiplomaLookup",
+				path: '/diploma-management/diploma-lookup',
+				name: 'Diploma Lookup',
+				component: './DiplomaManagement/DiplomaLookup',
 			},
-			
-		]
+		],
 	},
 
 	{
-		path: "/classroom-management",
-		name: "Quản lý phòng học",
-		component: "./ClassRoomManagement",
-		icon: "InsertRowRightOutlined",
+		path: '/classroom-management',
+		name: 'Quản lý phòng học',
+		// component: "./ClassRoomManagement",
+		icon: 'InsertRowRightOutlined',
+		routes: [
+			{
+				path: '/classroom-management/dashboard',
+				name: 'Dash Board',
+				component: './ClassRoomManagement/dashboard',
+			},
+			{
+				path: '/classroom-management/classroom',
+				name: 'Class Room',
+				component: './ClassRoomManagement',
+			},
+			{
+				path: '/classroom-management/1',
+				name: 'Un Available',
+				// component: "./DiplomaManagement/DiplomaInformationManagement",
+			},
+
+			{
+				path: '/classroom-management/2',
+				name: 'Un Available',
+				// component: "./DiplomaManagement/DiplomaFieldTemplateManagement",
+			},
+		],
 	},
-	
+
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',

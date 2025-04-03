@@ -3,10 +3,11 @@ declare module Classroom {
     export type RoomType = 'Lecture' | 'Lab' | 'Auditorium';
     
     export interface Record {
-      roomCode: string;
-      roomName: string;
-      seatingCapacity: number;
-      roomType: RoomType;
-      assignedStaff: string;
+    id: string; // UUID primary key
+    roomCode: string;
+    roomName: string;
+    seatingCapacity: number;
+    roomType: RoomType;
+    assignedStaff: string;
     }
-  }
+}

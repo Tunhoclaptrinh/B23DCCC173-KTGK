@@ -118,12 +118,12 @@ const ClassroomManagement: React.FC = () => {
 			key: 'roomType',
 			sorter: (a, b) => a.roomType.localeCompare(b.roomType),
 		},
-		// {
-		// 	title: 'Assigned Staff',
-		// 	dataIndex: 'assignedStaff',
-		// 	key: 'assignedStaff',
-		// 	sorter: (a, b) => a.assignedStaff.localeCompare(b.assignedStaff),
-		// },
+		{
+			title: 'Assigned Staff',
+			dataIndex: 'assignedStaff',
+			key: 'assignedStaff',
+			sorter: (a, b) => a.assignedStaff.localeCompare(b.assignedStaff),
+		},
 		// {
 		// 	title: 'Description',
 		// 	dataIndex: 'description',

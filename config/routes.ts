@@ -157,6 +157,13 @@ export default [
 			
 		]
 	},
+
+	{
+		path: "/classroom-management",
+		name: "Quản lý phòng học",
+		component: "./ClassRoomManagement",
+		icon: "InsertRowRightOutlined",
+	},
 	
 	// DANH MUC HE THONG
 	// {
